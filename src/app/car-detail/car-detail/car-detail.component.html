@@ -1,0 +1,30 @@
+<ng-container *ngIf="car$ | async as car">
+  <div class="container card">
+    <div>
+      <h1>{{ car?.model}}</h1>
+      <img [src]="'./../../../assets/' + car.photo" [alt]="car?.model" width="700">
+    </div>
+    <div class="car-info">
+      <p>{{ car?.description }}</p>
+      <h2>Specifications:</h2>
+      <div class="specifications">
+        <div>
+          <ul>
+            <li><strong>Brand:</strong> {{ car?.brand }}</li>
+            <li><strong>Model:</strong> {{ car?.model }}</li>
+            <li><strong>Year:</strong> {{ car?.year }}</li>
+            <li><strong>Price:</strong> {{ car?.price }}</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><strong>Fuel type:</strong> {{ car?.fuelType }}</li>
+            <li><strong>Transmission:</strong> {{ car?.transmission }}</li>
+            <li><strong>Cylinders:</strong> {{ car?.cylinders }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ng-container>

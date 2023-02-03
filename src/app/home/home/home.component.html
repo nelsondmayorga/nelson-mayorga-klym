@@ -1,0 +1,9 @@
+<div class="search-container">
+  <div class="search-title">Search by brand</div>
+  <input [formControl]="searchBox" (keyup)="onSearch()" class="search-box" placeholder="Brand...">
+</div>
+<ng-container *ngIf="(cars$ | async) as cars">
+  <app-car-list [cars]="cars" ></app-car-list>
+  <div class="no-cars" *ngIf="cars.length === 0">No Cars Found!</div>
+</ng-container>
+

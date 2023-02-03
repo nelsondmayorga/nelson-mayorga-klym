@@ -1,0 +1,15 @@
+  <div (click)="goToCarDetail()" class="card">
+    <div class="card-header">
+      <img [src]="'./../../../../../assets/' + car.photo" [alt]="car.model" />
+    </div>
+    <div class="card-body">
+      <h4>{{ car.model }}</h4>
+      <span class="tag">{{ car.year}}</span>
+      <p>{{ car.description }}</p>
+      <span>Brand: {{ car.brand }} </span>
+      <span>Price: {{ car.price | currency }} </span>
+    </div>
+    <div >
+      <button class="card-button">Detail</button>
+    </div>
+  </div>
