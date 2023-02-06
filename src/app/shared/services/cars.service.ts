@@ -13,7 +13,7 @@ export class CarsService {
   constructor(private http: HttpClient) {}
 
   getCars() {
-    return this.http.get<ICar[]>('../../../assets/cars.json');
+    return this.http.get<ICar[]>('assets/cars.json');
   }
 
   setCarSelected(carSelected: ICar) {
